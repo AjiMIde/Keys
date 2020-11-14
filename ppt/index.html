@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+</head>
+<body>
+  <ul>
+    <li>1</li>
+    <li>2</li>
+    <li>3</li>
+    <li>4</li>
+    <li>5</li>
+  </ul>
+</body>
+<script>
+function clg(i) {
+  var ii = i
+  debugger
+  return function () { console.log(ii) }
+}
+var lis = document.getElementsByTagName('li')
+for (var i = 0; i < lis.length; i++) {
+  lis[i].onclick = clg(i)
+}
+
+</script>
+</html>
